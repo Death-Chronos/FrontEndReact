@@ -25,6 +25,7 @@ export default function Home() {
                             <th scope="col">Nome</th>
                             <th scope="col">Nome de Usuário</th>
                             <th scope="col">Email</th>
+                            <th>Ação</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -35,6 +36,11 @@ export default function Home() {
                                     <td>{user.name}</td>
                                     <td>{user.username}</td>
                                     <td>{user.email}</td>
+                                    <td>
+                                        <button className='btn btn-success mx-2'>Visualizar</button>
+                                        <button className='btn btn-outline-warning mx-2'>Editar</button>
+                                        <button className='btn btn-danger mx-2'>Excluir</button>
+                                    </td>
                                 </tr>
                                 ))
                         }
