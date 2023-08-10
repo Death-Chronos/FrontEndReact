@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 export default function AddUser() {
     let navigate = useNavigate();
@@ -42,7 +43,7 @@ export default function AddUser() {
                                 name='email' value={email} onChange={(e) => onInputChange(e)} />
                         </div>
                         <button className='btn btn-outline-success m-2'>Cadastrar</button>
-                        <button className='btn btn-outline-warning m-2'>Cancelar</button>
+                        <Link className='btn btn-outline-warning m-2' to={'/'}>Cancelar</Link>
                     </form>
                 </div>
             </div>
