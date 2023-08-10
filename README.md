@@ -1,6 +1,5 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Front End de aplicação Java com React
+Este repositório corresponde ao front end de um projeto para estudo de React 
 
 ## Available Scripts
 
