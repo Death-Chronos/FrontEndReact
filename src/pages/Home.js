@@ -45,7 +45,7 @@ export default function Home() {
                                     <td>{user.username}</td>
                                     <td>{user.email}</td>
                                     <td>
-                                        <button className='btn btn-success mx-2'>Visualizar</button>
+                                        <Link className='btn btn-success mx-2' to={`/viewUser/${user.id}`}>Visualizar</Link>
                                         <Link className='btn btn-outline-warning mx-2' to={`/editUser/${user.id}`}>Editar</Link>
                                         <button className='btn btn-danger mx-2' onClick={()=>deleteUser(user.id)}>Excluir</button>
                                     </td>
