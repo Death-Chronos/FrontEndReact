@@ -15,3 +15,6 @@ Abra [http://localhost:3000](http://localhost:3000) para visualizá-lo em seu na
 A página será recarregada quando você fizer alterações.\
 Você também pode ver erros no console.
 
+# Menção
+Criado com base no código do Canal 
+ [Cursos de Progamação](https://www.youtube.com/@cursosdeprogramacao).
