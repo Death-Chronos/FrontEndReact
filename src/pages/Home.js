@@ -1,24 +1,30 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 
 export default function Home() {
     useEffect(() => {
         loadUsers();
+        //Sempre chama a função após um reload
     }, [])
 
     const [users, setUsers] = useState([]);
+    //Aqui ele define os users e também a função que altera seus estados, setUsers
+
 
     const loadUsers = async () => {
         const result = await axios.get('http://localhost:8080/users')
         setUsers(result.data);
+        //Faz a requisição de todos os users a API
     }
 
     const deleteUser = async (id) => {
         await axios.delete(`http://localhost:8080/user/${id}`)
         loadUsers();
+        // Faz o requisição de delete a API
+
     }
 
     return (
@@ -49,6 +55,7 @@ export default function Home() {
                                     </td>
                                 </tr>
                             ))
+                            //Aqui ele repete todo o escopo para cada user requisitado
                         }
                     </tbody>
                 </table>

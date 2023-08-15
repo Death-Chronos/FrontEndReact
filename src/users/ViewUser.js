@@ -10,6 +10,8 @@ export default function ViewUser() {
         name: "",
         username: "",
         email: "",
+        //Aqui ele define o user e seus campos, e também a função que altera seu estado, setuser
+
     })
     useEffect(() => {
         const loadUser = async () => {
@@ -17,6 +19,8 @@ export default function ViewUser() {
             setUser(result.data)
         }
         loadUser()
+        // Isso aqui é para puxar da API o user a ser mostrado
+
     }, [id])
 
 

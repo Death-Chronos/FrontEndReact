@@ -10,16 +10,21 @@ export default function AddUser() {
         name: "",
         username: "",
         email: "",
+        //Aqui ele define o user e seus campos, e também a função que altera seu estado, setuser
+
     });
     const { name, username, email } = user
     const onInputChange = (e) => {
         setUser({ ...user, [e.target.name]: e.target.value })
+        // Isso aqui é para mudar apenas o atributo mudado no input
+
     }
 
-    const onSubmit = async (e)=>{
+    const onSubmit = async (e) => {
         e.preventDefault();
-        await axios.post("http://localhost:8080/user",user)
+        await axios.post("http://localhost:8080/user", user)
         navigate("/")
+        //Aqui ele envia o user criado á API
     }
     return (
         <div className='container'>

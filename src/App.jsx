@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Navbar/>
+         <Navbar/> {/*faz com que o navbar apareça em todas as páginas */}
         <Routes>
           <Route exact path='/' element={<Home/>}></Route>
           <Route exact path='/addUser' element={<AddUser/>}></Route>

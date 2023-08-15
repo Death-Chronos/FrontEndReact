@@ -7,14 +7,17 @@ export default function EditUser() {
     let navigate = useNavigate();
 
     const { id } = useParams();
+    //Aqui ele puxa o id do link
 
     const [user, setUser] = useState({
         name: "",
         username: "",
         email: "",
+        //Aqui ele define o user e seus campos, e também a função que altera seu estado, setuser
     });
-    const { name, username, email } = user
+    const { name, username, email } = user //isso aqui é para destrinchar o user, de forma a usar o atributos separados nos inputs
     const onInputChange = (e) => {
+        // Isso aqui é para mudar apenas o atributo mudado no input
         setUser({ ...user, [e.target.name]: e.target.value })
     }
 
@@ -24,12 +27,14 @@ export default function EditUser() {
             setUser(result.data)
         }
         loadUser();
+        // Aqui ele puxa o user selecionado para ser editado
     }, [id])
 
     const onSubmit = async (e) => {
         e.preventDefault();
         await axios.put(`http://localhost:8080/user/${id}`, user)
         navigate("/")
+        //Aqui ele manda o user atualizado para a API
     }
 
 
