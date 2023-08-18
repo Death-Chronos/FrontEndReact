@@ -28,7 +28,7 @@ export default function EditUser() {
         }
         loadUser();
         // Aqui ele puxa o user selecionado para ser editado
-    }, [id])
+    }, [user])
 
     const onSubmit = async (e) => {
         e.preventDefault();

@@ -7,8 +7,8 @@ import { Link } from 'react-router-dom';
 export default function Home() {
     useEffect(() => {
         loadUsers();
-        //Sempre chama a função após um reload
-    }, [])
+        //Sempre chama a função após um reload ou quando o estado(users) é mudado
+    }, [users])
 
     const [users, setUsers] = useState([]);
     //Aqui ele define os users e também a função que altera seus estados, setUsers

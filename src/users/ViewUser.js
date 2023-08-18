@@ -21,7 +21,7 @@ export default function ViewUser() {
         loadUser()
         // Isso aqui é para puxar da API o user a ser mostrado
 
-    }, [id])
+    }, [user])
 
 
 
